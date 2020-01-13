@@ -1,0 +1,11 @@
+package ${rpcPack};
+
+
+/**
+* ${model}Service接口
+* @author :${author}
+* @date :${ctime}
+*/
+public interface ${model}Service  {
+
+}

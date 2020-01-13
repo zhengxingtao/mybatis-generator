@@ -1,0 +1,14 @@
+package ${rpcPack};
+
+import com.weidai.common.base.BaseServiceMock;
+import ${mapperPack}.${model}Mapper;
+import ${modelPack}.${model};
+import ${modelPack}.${model}Example;
+
+/**
+* 降级实现${model}Service接口
+* @author: ${author} on ${ctime}.
+*/
+public class ${model}ServiceMock extends BaseServiceMock<${model}Mapper, ${model}, ${model}Example> implements ${model}Service {
+
+}

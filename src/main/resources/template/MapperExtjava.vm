@@ -1,0 +1,19 @@
+package ${mapperPack};
+
+import javax.annotation.Resource;
+import ${modelPack}.${model};
+import ${modelPack}.${model}Example;
+import ${mapperPack}.base.BaseMapper;
+
+
+/**
+ * ${model}MapperExt接口
+ * @author :${author}
+ * @date :${ctime}
+ */
+@Resource
+public interface ${model}MapperExt extends BaseMapper<${model},${model}Example> {
+
+
+
+}
