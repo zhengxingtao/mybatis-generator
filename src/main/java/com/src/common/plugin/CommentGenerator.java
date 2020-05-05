@@ -6,10 +6,7 @@ import org.mybatis.generator.api.dom.java.*;
 import org.mybatis.generator.api.dom.xml.Attribute;
 import org.mybatis.generator.api.dom.xml.XmlElement;
 import org.mybatis.generator.internal.DefaultCommentGenerator;
-import org.mybatis.generator.internal.util.StringUtility;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -21,13 +18,13 @@ import java.util.Properties;
 public class CommentGenerator extends DefaultCommentGenerator {
 
 
-    private Properties myPoperties = new Properties();
+    private Properties myProperties = new Properties();
 
     @Override
     public void addConfigurationProperties(Properties properties) {
         super.addConfigurationProperties(properties);
         //本地保存一份properties
-        this.myPoperties.putAll(properties);
+        this.myProperties.putAll(properties);
     }
 
     //生成File 自定义的注释
@@ -59,7 +56,7 @@ public class CommentGenerator extends DefaultCommentGenerator {
     @Override
     public void addRootComment(XmlElement rootElement) {
         super.addRootComment(rootElement);
-        Object generateExt = myPoperties.get("generateExt");
+        Object generateExt = myProperties.get("generateExt");
         if (null == generateExt || !generateExt.toString().equals("true")) {
             return;
         }
@@ -85,7 +82,7 @@ public class CommentGenerator extends DefaultCommentGenerator {
     public void addJavaFileComment(CompilationUnit compilationUnit) {
         /*super.addJavaFileComment(compilationUnit);*/
         //如果没有选择生成扩展类 则给JavaModel 加上 @Resource注解
-        String generateExt = myPoperties.getProperty("generateExt");
+        String generateExt = myProperties.getProperty("generateExt");
         if (generateExt == null || !generateExt.equals("true")) {
 
             //生成的是 JavaModel 和 JavaModelExample 文件

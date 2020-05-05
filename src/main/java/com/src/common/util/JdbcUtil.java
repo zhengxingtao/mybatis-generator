@@ -43,7 +43,7 @@ public class JdbcUtil {
 			}
 		}
 		result = pstmt.executeUpdate();
-		return result > 0 ? true : false;
+		return result > 0;
 	}
 
 	// 查询多条记录

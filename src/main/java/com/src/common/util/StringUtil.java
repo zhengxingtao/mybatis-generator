@@ -15,10 +15,6 @@ public class StringUtil {
     private static Pattern linePattern = Pattern.compile("_(\\w)");
     private static Pattern humpPattern = Pattern.compile("[A-Z]");
 
-
-    public static void main(String[] args) {
-        System.out.print(lineToHump("src_test_"));
-    }
     /**
      * 下划线转驼峰
      * @param str
@@ -78,7 +74,7 @@ public class StringUtil {
         if (Character.isLowerCase(s.charAt(0))) {
             return s;
         } else {
-            return (new StringBuilder()).append(Character.toLowerCase(s.charAt(0))).append(s.substring(1)).toString();
+            return Character.toLowerCase(s.charAt(0)) + s.substring(1);
         }
     }
 
@@ -94,7 +90,7 @@ public class StringUtil {
         if (Character.isUpperCase(s.charAt(0))) {
             return s;
         } else {
-            return (new StringBuffer()).append(Character.toUpperCase(s.charAt(0))).append(s.substring(1)).toString();
+            return Character.toUpperCase(s.charAt(0)) + s.substring(1);
         }
     }
 

@@ -1,8 +1,5 @@
 package com.src.common.util;
 
-//import sun.misc.BASE64Decoder;
-//import sun.misc.BASE64Encoder;
-
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
@@ -62,20 +59,10 @@ public class AESUtil {
             aesEncode = aesEncode.replaceAll("[\\s*\t\n\r]", "");
             //11.将字符串返回
             return aesEncode;
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (NoSuchPaddingException e) {
-            e.printStackTrace();
-        } catch (InvalidKeyException e) {
-            e.printStackTrace();
-        } catch (IllegalBlockSizeException e) {
-            e.printStackTrace();
-        } catch (BadPaddingException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        //如果有错就返加nulll
+        //如果有错就返加null
         return null;
     }
 
