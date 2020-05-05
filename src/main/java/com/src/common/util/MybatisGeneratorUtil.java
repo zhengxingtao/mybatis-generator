@@ -13,7 +13,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static com.src.common.util.StringUtil.lineToHump;
-import static com.src.common.util.StringUtil.toLowerCaseFirstOne;
 
 
 /**

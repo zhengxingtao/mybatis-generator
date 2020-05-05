@@ -3,7 +3,6 @@ package com.src.common.plugin;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.PluginAdapter;
-import org.mybatis.generator.api.dom.java.Interface;
 import org.mybatis.generator.api.dom.java.Method;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 
@@ -45,15 +44,6 @@ public class LombokPlugin extends PluginAdapter {
         topLevelClass.addJavaDocLine(" * @date :" + date2Str(new Date()));
         topLevelClass.addJavaDocLine(" */");
 
-        return true;
-    }
-
-    @Override
-    public boolean clientGenerated(Interface interfaze, TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
-        //Mapper文件的注释
-        interfaze.addJavaDocLine("/**");
-        interfaze.addJavaDocLine("* Created by Mybatis Generator on " + date2Str(new Date()));
-        interfaze.addJavaDocLine("*/");
         return true;
     }
 
