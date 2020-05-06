@@ -90,8 +90,8 @@
             #if($last_insert_id_tables.containsKey($!table.table_name) == true)
                 <table tableName="$!table.table_name" domainObjectName="$!table.model_name"
                        enableCountByExample="true"
-                       enableUpdateByExample="true"
-                       enableDeleteByExample="true"
+                       enableUpdateByExample="false"
+                       enableDeleteByExample="false"
                        enableSelectByExample="true"
                        selectByExampleQueryId="true">
                     <generatedKey column="$!last_insert_id_tables.get($!table.table_name)" sqlStatement="MySql" identity="true"/>
@@ -99,8 +99,8 @@
             #else
                 <table tableName="$!table.table_name" domainObjectName="$!table.model_name"
                        enableCountByExample="true"
-                       enableUpdateByExample="true"
-                       enableDeleteByExample="true"
+                       enableUpdateByExample="false"
+                       enableDeleteByExample="false"
                        enableSelectByExample="true"
                        selectByExampleQueryId="true">
                     <generatedKey column="id" sqlStatement="MySql" identity="true"/>
